@@ -36,7 +36,7 @@
         ORDER BY reg_date DESC, info_id DESC
         LIMIT #{offset}, #{pageSize}
     </select>
-    <select id="count" resultType="long">
+    <select id="count" resultType="int">
         SELECT count(*) FROM information
     </select>
     <update id="increaseViewCnt" parameterType="long">

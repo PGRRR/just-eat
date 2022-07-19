@@ -23,7 +23,7 @@ public class InformationService {
         return informationRepository.selectAll();
     }
 
-    public Long getCount() {
+    public int getCount() {
         return informationRepository.count();
     }
 

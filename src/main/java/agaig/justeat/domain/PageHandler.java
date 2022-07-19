@@ -16,17 +16,17 @@ public class PageHandler {
     private boolean showPrev;
     private boolean showNext;
 
-    public PageHandler(long totalCnt, int page) {
+    public PageHandler(int totalCnt, int page) {
         this(totalCnt, page, 10);
     }
 
-    public PageHandler(long totalCnt, int page, int pageSize) {
+    public PageHandler(int totalCnt, int page, int pageSize) {
         this.totalCnt = totalCnt;
         this.page = page;
         this.pageSize = pageSize;
 
         totalPage = (int) Math.ceil(totalCnt / (double)pageSize);
-        beginPage = page / naviSize * naviSize + 1;
+        beginPage = (page - 1) / naviSize * naviSize + 1;
         endPage = Math.min(beginPage + naviSize - 1, totalPage);
         showPrev = beginPage != 1;
         showNext = endPage != totalPage;

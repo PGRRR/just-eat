@@ -38,7 +38,7 @@ public class InformationController {
     public String list(Integer page, Integer pageSize, Model model) {
         if (page == null) page = 1;
         if (pageSize == null) pageSize = 10;
-        long totalCnt = informationService.getCount();
+        int totalCnt = informationService.getCount();
         PageHandler pageHandler = new PageHandler(totalCnt, page, pageSize);
         Map<String, Integer> map = new HashMap<>();
         map.put("offset", (page - 1) * pageSize);

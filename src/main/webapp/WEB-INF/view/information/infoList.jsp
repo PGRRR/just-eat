@@ -51,19 +51,32 @@ uri="http://java.sun.com/jstl/fmt_rt"%>
             </tbody>
           </table>
         </div>
-          <a class="member-btn-a" href="<c:url value='/info/write'/>">공지사항 작성</a>
-          <a class="member-btn-b" href="/"> 홈으로 돌아가기 </a>
+        <a class="member-btn-a" href="<c:url value='/info/write'/>"
+          >공지사항 작성</a
+        >
+        <a class="member-btn-b" href="/"> 홈으로 돌아가기 </a>
         <div class="page-handler">
-                <c:if test="${pageHandler.showPrev}">
-                    <a href="<c:url value='/info/list?page=${i-1}&pageSize=${pageHandler.pageSize}'/>">&lt;</a>
-                </c:if>
-                <c:forEach var="i" begin="${pageHandler.beginPage}" end="${pageHandler.endPage}">
-                    <a href="<c:url value='/info/list?page=${i}&pageSize=${pageHandler.pageSize}'/>">${i}</a>
-                </c:forEach>
-                <c:if test="${pageHandler.showNext}">
-                  <a href="<c:url value='/info/list?page=${i+1}&pageSize=${pageHandler.pageSize}'/>">&lt;</a>
-                </c:if>
-        </div>
+          <c:if test="${pageHandler.showPrev}">
+            <a
+              href="<c:url value='/info/list?page=${pageHandler.beginPage-1}'/>"
+              >&lt;</a
+            >
+          </c:if>
+          <c:forEach
+            var="i"
+            begin="${pageHandler.beginPage}"
+            end="${pageHandler.endPage}"
+          >
+            <a
+              href="<c:url value='/info/list?page=${i}&pageSize=${pageHandler.pageSize}'/>"
+              >${i}</a
+            >
+          </c:forEach>
+          <c:if test="${pageHandler.showNext}">
+            <a href="<c:url value='/info/list?page=${pageHandler.endPage+1}'/>"
+              >&gt;</a
+            >
+          </c:if>
         </div>
       </div>
     </div>

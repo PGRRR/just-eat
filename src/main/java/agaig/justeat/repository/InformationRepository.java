@@ -27,7 +27,7 @@ public interface InformationRepository {
 
     List<Information> selectPage(Map<String, Integer> map);
 
-    Long count();
+    Integer count();
 
     Long increaseViewCnt(Long info_id);
 
