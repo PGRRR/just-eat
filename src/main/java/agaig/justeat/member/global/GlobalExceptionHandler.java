@@ -1,6 +1,6 @@
-package agaig.justeat.global;
+package agaig.justeat.member.global;
 
-import agaig.justeat.exception.SignInException;
+import agaig.justeat.member.exception.SignInException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

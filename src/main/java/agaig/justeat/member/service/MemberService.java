@@ -1,26 +1,22 @@
-package agaig.justeat.service;
+package agaig.justeat.member.service;
 
-import agaig.justeat.domain.Member;
-import agaig.justeat.dto.MemberResponseDto;
-import agaig.justeat.dto.MemberSaveRequestDto;
-import agaig.justeat.dto.MemberUpdateRequestDto;
-import agaig.justeat.exception.ErrorCode;
-import agaig.justeat.exception.SignInException;
-import agaig.justeat.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import agaig.justeat.member.domain.Member;
+import agaig.justeat.member.dto.MemberResponseDto;
+import agaig.justeat.member.dto.MemberSaveRequestDto;
+import agaig.justeat.member.dto.MemberUpdateRequestDto;
+import agaig.justeat.member.exception.ErrorCode;
+import agaig.justeat.member.exception.SignInException;
+import agaig.justeat.member.repository.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
-
-    @Autowired
-    public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
 
     public Long join(MemberSaveRequestDto requestDto) {
         Optional.ofNullable(memberRepository.findByEmail(requestDto.getEmail()))

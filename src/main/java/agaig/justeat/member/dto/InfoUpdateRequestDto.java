@@ -1,6 +1,6 @@
-package agaig.justeat.dto;
+package agaig.justeat.member.dto;
 
-import agaig.justeat.domain.Information;
+import agaig.justeat.member.domain.Information;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-public class InfoSaveRequestDto {
+public class InfoUpdateRequestDto {
     private String writer;
     private String title;
     private String content;
@@ -21,7 +21,7 @@ public class InfoSaveRequestDto {
     private Long member_id;
 
     @Builder
-    public InfoSaveRequestDto(Information information) {
+    public InfoUpdateRequestDto(Information information) {
         this.writer = writer;
         this.title = title;
         this.content = content;

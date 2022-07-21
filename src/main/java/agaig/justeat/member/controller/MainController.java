@@ -1,8 +1,9 @@
-package agaig.justeat.controller;
+package agaig.justeat.member.controller;
 
-import agaig.justeat.annotation.MemberSignInCheck;
-import agaig.justeat.domain.Member;
-import agaig.justeat.service.MemberService;
+import agaig.justeat.member.annotation.MemberSignInCheck;
+import agaig.justeat.member.domain.Member;
+import agaig.justeat.member.service.MemberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,13 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequiredArgsConstructor
 public class MainController {
 
     private final MemberService memberService;
-
-    public MainController(MemberService memberService) {
-        this.memberService = memberService;
-    }
 
     @GetMapping("")
     public String main(Model model) {

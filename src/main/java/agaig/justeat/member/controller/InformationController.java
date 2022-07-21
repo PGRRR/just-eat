@@ -1,14 +1,14 @@
-package agaig.justeat.controller;
+package agaig.justeat.member.controller;
 
-import agaig.justeat.annotation.MemberSignInCheck;
-import agaig.justeat.domain.Information;
-import agaig.justeat.domain.PageHandler;
-import agaig.justeat.dto.InfoResponseDto;
-import agaig.justeat.dto.InfoSaveRequestDto;
-import agaig.justeat.dto.MemberResponseDto;
-import agaig.justeat.service.InformationService;
-import agaig.justeat.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
+import agaig.justeat.member.annotation.MemberSignInCheck;
+import agaig.justeat.member.domain.Information;
+import agaig.justeat.member.domain.PageHandler;
+import agaig.justeat.member.dto.InfoResponseDto;
+import agaig.justeat.member.dto.InfoSaveRequestDto;
+import agaig.justeat.member.dto.MemberResponseDto;
+import agaig.justeat.member.service.InformationService;
+import agaig.justeat.member.service.MemberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,17 +22,12 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/info")
 public class InformationController {
 
     private final InformationService informationService;
     private final MemberService memberService;
-
-    @Autowired
-    public InformationController(InformationService informationService, MemberService memberService) {
-        this.informationService = informationService;
-        this.memberService = memberService;
-    }
 
     @GetMapping("/list")
     public String list(Integer page, Integer pageSize, Model model) {

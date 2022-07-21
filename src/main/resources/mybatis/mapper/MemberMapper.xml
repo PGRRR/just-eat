@@ -3,7 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="agaig.justeat.repository.MemberRepository">
+<mapper namespace="agaig.justeat.member.repository.MemberRepository">
     <insert id="insert" parameterType="Member">
         insert into members(email, password, name, phone, address, gender, birth)
         values(#{email}, #{password}, #{name}, #{phone}, #{address}, #{gender}, #{birth})

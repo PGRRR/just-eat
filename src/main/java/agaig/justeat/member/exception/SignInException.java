@@ -1,4 +1,4 @@
-package agaig.justeat.exception;
+package agaig.justeat.member.exception;
 
 import lombok.Getter;
 

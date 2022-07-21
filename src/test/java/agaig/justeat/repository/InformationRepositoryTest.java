@@ -1,6 +1,6 @@
 //package agaig.justeat.repository;
 //
-//import agaig.justeat.domain.Information;
+//import agaig.justeat.member.domain.Information;
 //import agaig.justeat.dto.InfoBoardResponseDto;
 //import agaig.justeat.dto.InfoSaveRequestDto;
 //import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package agaig.justeat.domain;
+package agaig.justeat.member.domain;
 
 import lombok.Builder;
 import lombok.Getter;

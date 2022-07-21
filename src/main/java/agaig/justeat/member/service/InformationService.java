@@ -1,23 +1,19 @@
-package agaig.justeat.service;
+package agaig.justeat.member.service;
 
-import agaig.justeat.domain.Information;
-import agaig.justeat.dto.InfoResponseDto;
-import agaig.justeat.dto.InfoSaveRequestDto;
-import agaig.justeat.repository.InformationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import agaig.justeat.member.domain.Information;
+import agaig.justeat.member.dto.InfoResponseDto;
+import agaig.justeat.member.dto.InfoSaveRequestDto;
+import agaig.justeat.member.repository.InformationRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
 @Service
+@RequiredArgsConstructor
 public class InformationService {
     private final InformationRepository informationRepository;
-
-    @Autowired
-    public InformationService(InformationRepository informationRepository) {
-        this.informationRepository = informationRepository;
-    }
 
     public List<Information> getBoardList() {
         return informationRepository.selectAll();

@@ -1,8 +1,8 @@
-package agaig.justeat.repository;
+package agaig.justeat.member.repository;
 
-import agaig.justeat.domain.Information;
-import agaig.justeat.dto.InfoSaveRequestDto;
-import agaig.justeat.dto.InfoUpdateRequestDto;
+import agaig.justeat.member.domain.Information;
+import agaig.justeat.member.dto.InfoSaveRequestDto;
+import agaig.justeat.member.dto.InfoUpdateRequestDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package agaig.justeat.dto;
+package agaig.justeat.member.dto;
 
-import agaig.justeat.domain.Member;
+import agaig.justeat.member.domain.Member;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
